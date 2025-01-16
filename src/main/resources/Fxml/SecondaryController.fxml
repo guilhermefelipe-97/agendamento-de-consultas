@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="884.0" prefWidth="1236.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ufrn.tads.agendamentodeconsultas.controller.SecondaryController">
+    <children>
+        <Pane layoutY="14.0" prefHeight="768.0" prefWidth="1280.0">
+            <children>
+                <Accordion layoutX="780.0" layoutY="343.0" />
+                <Pane layoutX="14.0" layoutY="54.0" prefHeight="574.0" prefWidth="382.0" style="-fx-border-color: black; -fx-border-radius: 10;">
+                    <children>
+                        <VBox layoutX="14.0" layoutY="62.0" prefHeight="465.0" prefWidth="343.0">
+                            <children>
+                                <Text fx:id="id" strokeType="OUTSIDE" strokeWidth="0.0" text="ID:">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Text>
+                                <TextField fx:id="txtID" alignment="CENTER" editable="false" opacity="0.8" prefHeight="25.0" prefWidth="106.0" text="1">
+                                    <VBox.margin>
+                                        <Insets right="300.0" top="10.0" />
+                                    </VBox.margin>
+                                </TextField>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets top="20.0" />
+                                    </VBox.margin>
+                                </Text>
+                                <TextField fx:id="txtNome">
+                                    <VBox.margin>
+                                        <Insets top="5.0" />
+                                    </VBox.margin>
+                                </TextField>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="CPF:">
+                                    <VBox.margin>
+                                        <Insets top="10.0" />
+                                    </VBox.margin>
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Text>
+                                <TextField fx:id="txtCPF" prefHeight="25.0" prefWidth="106.0">
+                                    <VBox.margin>
+                                        <Insets right="230.0" top="5.0" />
+                                    </VBox.margin>
+                                </TextField>
+                                <Text layoutX="10.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de Nascimento:">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets top="10.0" />
+                                    </VBox.margin>
+                                </Text>
+                                <TextField fx:id="txtNasc" layoutX="10.0" layoutY="249.0" prefHeight="26.0" prefWidth="343.0">
+                                    <VBox.margin>
+                                        <Insets right="230.0" top="5.0" />
+                                    </VBox.margin>
+                                </TextField>
+                                <Text layoutX="10.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefone:">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets top="10.0" />
+                                    </VBox.margin>
+                                </Text>
+                                <TextField fx:id="txtTel" layoutX="10.0" layoutY="293.0" prefHeight="26.0" prefWidth="343.0">
+                                    <VBox.margin>
+                                        <Insets right="230.0" top="5.0" />
+                                    </VBox.margin>
+                                </TextField>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Endereço:">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets top="10.0" />
+                                    </VBox.margin>
+                                </Text>
+                                <TextField fx:id="txtEnd" prefHeight="26.0" prefWidth="343.0">
+                                    <VBox.margin>
+                                        <Insets top="5.0" />
+                                    </VBox.margin>
+                                </TextField>
+                                <Text layoutX="10.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Médico:">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets top="5.0" />
+                                    </VBox.margin>
+                                </Text>
+                                <ComboBox fx:id="comboBoxMedicos" prefWidth="150.0" promptText="Selecione:">
+                                    <VBox.margin>
+                                        <Insets top="5.0" />
+                                    </VBox.margin>
+                                </ComboBox>
+                                <Text layoutX="10.0" layoutY="377.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horários:">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets top="5.0" />
+                                    </VBox.margin>
+                                </Text>
+                                <ComboBox fx:id="comboBoxHorarios" layoutX="10.0" layoutY="385.0" prefWidth="150.0" promptText="Selecione:">
+                                    <VBox.margin>
+                                        <Insets top="5.0" />
+                                    </VBox.margin>
+                                </ComboBox>
+                            </children>
+                        </VBox>
+                        <Label alignment="TOP_CENTER" layoutX="100.0" layoutY="22.0" prefHeight="40.0" prefWidth="171.0" text="Agendamento">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                  <ButtonBar layoutX="11.0" layoutY="527.0" prefHeight="40.0" prefWidth="349.0">
+                     <buttons>
+                              <Button fx:id="btnCadastrar" prefHeight="24.0" prefWidth="104.0" text="Cadastrar" />
+                              <Button fx:id="btnAlterar" prefHeight="24.0" prefWidth="104.0" text="Alterar" />
+                              <Button fx:id="btnExcluir" prefHeight="24.0" prefWidth="104.0" text="Excluir" />
+                        <Button fx:id="btnLimpar" layoutX="256.0" layoutY="18.0" onAction="#limparCampos" prefHeight="24.0" prefWidth="104.0" text="Limpar" />
+                     </buttons>
+                  </ButtonBar>
+                    </children>
+                </Pane>
+                <Pane layoutX="401.0" layoutY="54.0" prefHeight="574.0" prefWidth="870.0" style="-fx-border-color: black; -fx-border-radius: 10;">
+                    <children>
+                        <TableView fx:id="tableViewPacientes" layoutX="4.0" layoutY="11.0" prefHeight="554.0" prefWidth="861.0">
+                            <columns>
+                                <TableColumn editable="false" prefWidth="39.0" text="ID" />
+                                <TableColumn fx:id="colNome" editable="false" prefWidth="125.0" text="Nome" />
+                                <TableColumn fx:id="colCPF" editable="false" prefWidth="98.0" text="CPF" />
+                        <TableColumn fx:id="colEndereco11" editable="false" prefWidth="128.0" text="Data de Nascimento" />
+                                <TableColumn fx:id="colEndereco1" editable="false" prefWidth="120.0" text="Telefone" />
+                                <TableColumn fx:id="colEndereco" editable="false" prefWidth="142.0" text="Endereço" />
+                                <TableColumn fx:id="colMedico" editable="false" prefWidth="136.0" text="Médico" />
+                                <TableColumn fx:id="colHorarios" editable="false" minWidth="2.0" prefWidth="72.0" text="Horário" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </Pane>
+                <Button fx:id="secondaryButton" layoutX="547.0" layoutY="698.0" onAction="#switchToPrimary" prefHeight="31.0" prefWidth="187.0" text="Voltar para tela inicial">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font></Button>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>
