@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class DBConnection {
 
     // Dados para conexão com o banco
-    private static final String URL = "jdbc:postgresql://localhost:5432/CRUD Java - POO";
+    private static final String URL = "jdbc:postgresql://localhost:5432/crud";
     private static final String USUARIO = "postgres";
     private static final String SENHA = "admin";
 

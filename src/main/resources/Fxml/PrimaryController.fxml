@@ -25,7 +25,7 @@
           </font></Button>
         <ImageView fitHeight="582.0" fitWidth="1240.0" layoutX="-17.0" layoutY="-77.0">
           <image>
-            <Image url="@../../../../../../../../../../Imagem%20Clinica/Clínica%20Médica.png" />
+            <Image url="@../img/Clínica%20Médica.png" />
           </image>
         </ImageView>
       </children>
