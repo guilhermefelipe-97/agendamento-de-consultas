@@ -20,7 +20,7 @@
         <Pane layoutY="14.0" prefHeight="768.0" prefWidth="1280.0">
             <children>
                 <Accordion layoutX="780.0" layoutY="343.0" />
-                <HBox alignment="CENTER" layoutX="52.0" layoutY="33.0" prefHeight="621.0" prefWidth="1177.0">
+                <HBox alignment="CENTER" layoutX="52.0" layoutY="54.0" prefHeight="621.0" prefWidth="1177.0">
                     <children>
                         <Pane prefHeight="621.0" prefWidth="590.0" style="-fx-border-color: black; -fx-border-radius: 10;">
                             <children>
@@ -100,49 +100,49 @@
                                 </Label>
                                 <ButtonBar layoutX="29.0" layoutY="377.0" prefHeight="40.0" prefWidth="467.0">
                                     <buttons>
-                                        <Button fx:id="btnCadastrar" prefHeight="24.0" prefWidth="104.0" text="Cadastrar">
+                                        <Button fx:id="btnCadastrar" onAction="#cadastrarPaciente" prefHeight="24.0" prefWidth="104.0" text="Cadastrar">
                                  <font>
                                     <Font name="System Bold" size="12.0" />
                                  </font></Button>
-                                        <Button fx:id="btnAlterar" layoutX="256.0" layoutY="18.0" prefHeight="25.0" prefWidth="136.0" text="Alterar">
+                                        <Button fx:id="btnAlterar" layoutX="256.0" layoutY="18.0" onAction="#alterarCadastro" prefHeight="25.0" prefWidth="136.0" text="Alterar">
                                  <font>
                                     <Font name="System Bold" size="12.0" />
                                  </font></Button>
-                              <Button fx:id="btnExcluir" layoutX="144.0" layoutY="18.0" prefHeight="25.0" prefWidth="136.0" text="Excluir">
+                              <Button fx:id="btnExcluir" layoutX="144.0" layoutY="18.0" onAction="#excluirCadastro" prefHeight="25.0" prefWidth="136.0" text="Excluir">
                                  <font>
                                     <Font name="System Bold" size="12.0" />
                                  </font>
                               </Button>
-                              <Button fx:id="btnLimpar" layoutX="200.0" layoutY="18.0" prefHeight="25.0" prefWidth="136.0" text="Limpar">
+                              <Button fx:id="btnLimpar" layoutX="200.0" layoutY="18.0" onAction="#limparCampos" prefHeight="25.0" prefWidth="136.0" text="Limpar">
                                  <font>
                                     <Font name="System Bold" size="12.0" />
                                  </font>
                               </Button>
                                     </buttons>
                                 </ButtonBar>
-                        <TableView layoutX="14.0" layoutY="490.0" prefHeight="116.0" prefWidth="516.0">
+                        <TableView fx:id="tableViewPacientes" layoutX="14.0" layoutY="490.0" onMouseClicked="#getData" prefHeight="116.0" prefWidth="516.0">
                           <columns>
-                            <TableColumn prefWidth="98.0" text="Nome" />
-                            <TableColumn prefWidth="85.0" text="CPF" />
-                              <TableColumn prefWidth="132.0" text="Data de Nascimento" />
-                              <TableColumn prefWidth="84.0" text="Telefone" />
-                              <TableColumn prefWidth="116.0" text="Endereço" />
+                            <TableColumn fx:id="colNome" prefWidth="98.0" text="Nome" />
+                            <TableColumn fx:id="colCPF" prefWidth="98.0" text="CPF" />
+                              <TableColumn fx:id="colDataNascimento" prefWidth="119.0" text="Data de Nascimento" />
+                              <TableColumn fx:id="colTelefone" prefWidth="84.0" text="Telefone" />
+                              <TableColumn fx:id="colEndereco" prefWidth="116.0" text="Endereço" />
                           </columns>
                         </TableView>
                         <HBox layoutX="14.0" layoutY="448.0" prefHeight="33.0" prefWidth="516.0">
                            <children>
-                              <TextField promptText="Nome:" />
-                              <TextField layoutX="10.0" layoutY="10.0" promptText="CPF:">
+                              <TextField fx:id="txtBuscaNome" promptText="Nome:" />
+                              <TextField fx:id="txtBuscaCPF" layoutX="10.0" layoutY="10.0" promptText="CPF:">
                                  <HBox.margin>
                                     <Insets left="10.0" />
                                  </HBox.margin>
                               </TextField>
-                              <TextField layoutX="110.0" layoutY="10.0" promptText="Data de Nascimento:">
+                              <TextField fx:id="txtBuscaNascimento" layoutX="110.0" layoutY="10.0" promptText="Data de Nascimento:">
                                  <HBox.margin>
                                     <Insets left="10.0" />
                                  </HBox.margin>
                               </TextField>
-                              <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="138.0" text="Buscar">
+                              <Button fx:id="btnBuscar" mnemonicParsing="false" onAction="#buscarPacientes" prefHeight="25.0" prefWidth="138.0" text="Buscar">
                                  <HBox.margin>
                                     <Insets left="10.0" />
                                  </HBox.margin>
@@ -156,7 +156,7 @@
                         </Pane>
                         <Pane prefHeight="621.0" prefWidth="590.0" style="-fx-border-color: black; -fx-border-radius: 10;">
                             <children>
-                                <VBox layoutX="25.0" layoutY="65.0" prefHeight="290.0" prefWidth="482.0">
+                                <VBox layoutX="24.0" layoutY="75.0" prefHeight="303.0" prefWidth="482.0">
                                     <children>
                                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:">
                                             <font>
@@ -230,7 +230,7 @@
                                         <Font size="24.0" />
                                     </font>
                                 </Label>
-                        <ButtonBar layoutX="30.0" layoutY="378.0" prefHeight="40.0" prefWidth="467.0">
+                        <ButtonBar layoutX="24.0" layoutY="378.0" prefHeight="40.0" prefWidth="467.0">
                            <buttons>
                               <Button fx:id="btnCadastrarMed" prefHeight="24.0" prefWidth="104.0" text="Cadastrar">
                                  <font>
@@ -293,16 +293,23 @@
                         </Pane>
                     </children>
                 </HBox>
-                  <Button fx:id="sairButton1" alignment="CENTER" layoutX="658.0" layoutY="684.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#switchToPrimary" prefHeight="33.0" prefWidth="150.0" text="Sair" textAlignment="CENTER">
-                      <font>
-                          <Font name="System Bold" size="14.0" />
-                      </font>
-                  </Button>
-                  <Button fx:id="agendarButton" alignment="CENTER" layoutX="475.0" layoutY="684.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#switchToSecondaryButton" prefHeight="33.0" prefWidth="150.0" text="Agendar Consulta">
-                      <font>
-                          <Font name="System Bold" size="14.0" />
-                      </font>
-                  </Button>
+            <HBox layoutX="490.0" layoutY="708.0" prefHeight="40.0" prefWidth="300.0">
+               <children>
+                        <Button fx:id="agendarButton" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" onAction="#switchToSecondaryButton" prefHeight="31.0" prefWidth="138.0" text="Agendar Consulta">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="sairButton1" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#switchToPrimary" prefHeight="31.0" prefWidth="138.0" text="Sair" textAlignment="CENTER">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                        </Button>
+               </children>
+            </HBox>
             </children>
         </Pane>
     </children>

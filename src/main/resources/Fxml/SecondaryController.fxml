@@ -34,7 +34,7 @@
                                         <Insets />
                                     </VBox.margin>
                                 </Text>
-                                <TextField fx:id="txtNome" disable="true">
+                                <TextField fx:id="txtNome">
                                     <VBox.margin>
                                         <Insets top="5.0" />
                                     </VBox.margin>
@@ -47,7 +47,7 @@
                                         <Font name="System Bold" size="12.0" />
                                     </font>
                                 </Text>
-                                <TextField fx:id="txtCPF" disable="true" prefHeight="25.0" prefWidth="106.0">
+                                <TextField fx:id="txtCPF" prefHeight="25.0" prefWidth="106.0">
                                     <VBox.margin>
                                         <Insets right="230.0" top="5.0" />
                                     </VBox.margin>
@@ -60,7 +60,7 @@
                                         <Insets top="15.0" />
                                     </VBox.margin>
                                 </Text>
-                                <TextField fx:id="txtNasc" disable="true" layoutX="10.0" layoutY="249.0" prefHeight="26.0" prefWidth="343.0">
+                                <TextField fx:id="txtNasc" layoutX="10.0" layoutY="249.0" prefHeight="26.0" prefWidth="343.0">
                                     <VBox.margin>
                                         <Insets right="230.0" top="5.0" />
                                     </VBox.margin>
@@ -73,7 +73,7 @@
                                         <Insets top="15.0" />
                                     </VBox.margin>
                                 </Text>
-                                <TextField fx:id="txtTel" disable="true" layoutX="10.0" layoutY="293.0" prefHeight="26.0" prefWidth="343.0">
+                                <TextField fx:id="txtTel" layoutX="10.0" layoutY="293.0" prefHeight="26.0" prefWidth="343.0">
                                     <VBox.margin>
                                         <Insets right="230.0" top="5.0" />
                                     </VBox.margin>
@@ -86,7 +86,7 @@
                                         <Insets top="15.0" />
                                     </VBox.margin>
                                 </Text>
-                                <TextField fx:id="txtEnd" disable="true" prefHeight="26.0" prefWidth="343.0">
+                                <TextField fx:id="txtEnd" prefHeight="26.0" prefWidth="343.0">
                                     <VBox.margin>
                                         <Insets top="5.0" />
                                     </VBox.margin>
@@ -187,9 +187,9 @@
                   </Button>
                </children>
             </HBox>
-            <HBox layoutX="476.0" layoutY="708.0" prefHeight="46.0" prefWidth="329.0">
+            <HBox layoutX="469.0" layoutY="708.0" prefHeight="46.0" prefWidth="350.0">
                <children>
-                      <Button fx:id="tertiaryButton" onAction="#switchToTertiary" prefHeight="31.0" prefWidth="135.0" text="Realizar Cadastro">
+                      <Button fx:id="tertiaryButton" onAction="#switchToTertiary" prefHeight="31.0" prefWidth="138.0" text="Realizar Cadastro">
                           <font>
                               <Font name="System Bold" size="14.0" />
                           </font>
@@ -197,7 +197,7 @@
                         <Insets left="20.0" />
                      </HBox.margin>
                   </Button>
-                  <Button fx:id="secondaryButton1" layoutX="10.0" layoutY="10.0" onAction="#switchToPrimary" prefHeight="31.0" prefWidth="131.0" text="Sair">
+                  <Button fx:id="secondaryButton1" layoutX="10.0" layoutY="10.0" onAction="#switchToPrimary" prefHeight="31.0" prefWidth="138.0" text="Sair">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
