@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="884.0" prefWidth="1236.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ufrn.tads.agendamentodeconsultas.controller.TertiaryController">
+    <children>
+        <Pane layoutY="14.0" prefHeight="768.0" prefWidth="1280.0">
+            <children>
+                <Accordion layoutX="780.0" layoutY="343.0" />
+                <HBox alignment="CENTER" layoutX="52.0" layoutY="33.0" prefHeight="621.0" prefWidth="1177.0">
+                    <children>
+                        <Pane prefHeight="621.0" prefWidth="590.0" style="-fx-border-color: black; -fx-border-radius: 10;">
+                            <children>
+                                <VBox layoutX="28.0" layoutY="68.0" prefHeight="303.0" prefWidth="482.0">
+                                    <children>
+                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:">
+                                            <font>
+                                                <Font name="System Bold" size="12.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets left="5.0" />
+                                            </VBox.margin>
+                                        </Text>
+                                        <TextField fx:id="txtNome">
+                                            <VBox.margin>
+                                                <Insets top="5.0" />
+                                            </VBox.margin>
+                                        </TextField>
+                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Endereço:">
+                                            <font>
+                                                <Font name="System Bold" size="12.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets left="5.0" top="15.0" />
+                                            </VBox.margin>
+                                        </Text>
+                                        <TextField fx:id="txtEnd" prefHeight="26.0" prefWidth="343.0">
+                                            <VBox.margin>
+                                                <Insets top="5.0" />
+                                            </VBox.margin>
+                                        </TextField>
+                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="CPF:">
+                                            <VBox.margin>
+                                                <Insets left="5.0" top="15.0" />
+                                            </VBox.margin>
+                                            <font>
+                                                <Font name="System Bold" size="12.0" />
+                                            </font>
+                                        </Text>
+                                        <TextField fx:id="txtCPF" prefHeight="25.0" prefWidth="106.0">
+                                            <VBox.margin>
+                                                <Insets right="230.0" top="5.0" />
+                                            </VBox.margin>
+                                        </TextField>
+                                        <Text layoutX="10.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de Nascimento:">
+                                            <font>
+                                                <Font name="System Bold" size="12.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets left="5.0" top="15.0" />
+                                            </VBox.margin>
+                                        </Text>
+                                        <TextField fx:id="txtNasc" layoutX="10.0" layoutY="249.0" prefHeight="26.0" prefWidth="343.0">
+                                            <VBox.margin>
+                                                <Insets right="230.0" top="5.0" />
+                                            </VBox.margin>
+                                        </TextField>
+                                        <Text layoutX="10.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefone:">
+                                            <font>
+                                                <Font name="System Bold" size="12.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets left="5.0" top="15.0" />
+                                            </VBox.margin>
+                                        </Text>
+                                        <TextField fx:id="txtTel" layoutX="10.0" layoutY="293.0" prefHeight="26.0" prefWidth="343.0">
+                                            <VBox.margin>
+                                                <Insets right="230.0" top="5.0" />
+                                            </VBox.margin>
+                                        </TextField>
+                                    </children>
+                                </VBox>
+                                <Label alignment="TOP_CENTER" layoutX="101.0" layoutY="14.0" prefHeight="40.0" prefWidth="343.0" text="Pacientes" textAlignment="CENTER">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                </Label>
+                                <ButtonBar layoutX="29.0" layoutY="377.0" prefHeight="40.0" prefWidth="467.0">
+                                    <buttons>
+                                        <Button fx:id="btnCadastrar" prefHeight="24.0" prefWidth="104.0" text="Cadastrar">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Button>
+                                        <Button fx:id="btnAlterar" layoutX="256.0" layoutY="18.0" prefHeight="25.0" prefWidth="136.0" text="Alterar">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Button>
+                              <Button fx:id="btnExcluir" layoutX="144.0" layoutY="18.0" prefHeight="25.0" prefWidth="136.0" text="Excluir">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnLimpar" layoutX="200.0" layoutY="18.0" prefHeight="25.0" prefWidth="136.0" text="Limpar">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                                    </buttons>
+                                </ButtonBar>
+                        <TableView layoutX="14.0" layoutY="490.0" prefHeight="116.0" prefWidth="516.0">
+                          <columns>
+                            <TableColumn prefWidth="98.0" text="Nome" />
+                            <TableColumn prefWidth="85.0" text="CPF" />
+                              <TableColumn prefWidth="132.0" text="Data de Nascimento" />
+                              <TableColumn prefWidth="84.0" text="Telefone" />
+                              <TableColumn prefWidth="116.0" text="Endereço" />
+                          </columns>
+                        </TableView>
+                        <HBox layoutX="14.0" layoutY="448.0" prefHeight="33.0" prefWidth="516.0">
+                           <children>
+                              <TextField promptText="Nome:" />
+                              <TextField layoutX="10.0" layoutY="10.0" promptText="CPF:">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <TextField layoutX="110.0" layoutY="10.0" promptText="Data de Nascimento:">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="138.0" text="Buscar">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                            </children>
+                        </Pane>
+                        <Pane prefHeight="621.0" prefWidth="590.0" style="-fx-border-color: black; -fx-border-radius: 10;">
+                            <children>
+                                <VBox layoutX="25.0" layoutY="65.0" prefHeight="290.0" prefWidth="482.0">
+                                    <children>
+                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:">
+                                            <font>
+                                                <Font name="System Bold" size="12.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets left="5.0" />
+                                            </VBox.margin>
+                                        </Text>
+                                        <TextField fx:id="txtNomeMed">
+                                            <VBox.margin>
+                                                <Insets top="5.0" />
+                                            </VBox.margin>
+                                        </TextField>
+                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Especialidade:">
+                                            <font>
+                                                <Font name="System Bold" size="12.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets left="5.0" top="15.0" />
+                                            </VBox.margin>
+                                        </Text>
+                                        <TextField fx:id="txtEsp" prefHeight="26.0" prefWidth="343.0">
+                                            <VBox.margin>
+                                                <Insets top="5.0" />
+                                            </VBox.margin>
+                                        </TextField>
+                              <Text layoutX="10.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="5.0" top="15.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <TextField fx:id="txtEmail" layoutX="10.0" layoutY="187.0" prefHeight="25.0" prefWidth="106.0">
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </TextField>
+                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="CRM:">
+                                            <VBox.margin>
+                                                <Insets left="5.0" top="15.0" />
+                                            </VBox.margin>
+                                            <font>
+                                                <Font name="System Bold" size="12.0" />
+                                            </font>
+                                        </Text>
+                                        <TextField fx:id="txtCRM" prefHeight="25.0" prefWidth="106.0">
+                                            <VBox.margin>
+                                                <Insets right="230.0" top="5.0" />
+                                            </VBox.margin>
+                                        </TextField>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Telefone:">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="5.0" top="15.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <TextField fx:id="txtTelMed" prefHeight="25.0" prefWidth="149.0">
+                                 <VBox.margin>
+                                    <Insets right="230.0" top="5.0" />
+                                 </VBox.margin>
+                              </TextField>
+                                    </children>
+                                </VBox>
+                                <Label alignment="TOP_CENTER" layoutX="93.0" layoutY="14.0" prefHeight="40.0" prefWidth="343.0" text="Médicos" textAlignment="CENTER">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                </Label>
+                        <ButtonBar layoutX="30.0" layoutY="378.0" prefHeight="40.0" prefWidth="467.0">
+                           <buttons>
+                              <Button fx:id="btnCadastrarMed" prefHeight="24.0" prefWidth="104.0" text="Cadastrar">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnAlterarMed" layoutX="256.0" layoutY="18.0" prefHeight="25.0" prefWidth="136.0" text="Alterar">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnExcluirMed" layoutX="144.0" layoutY="18.0" prefHeight="25.0" prefWidth="136.0" text="Excluir">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnLimparMed" layoutX="200.0" layoutY="18.0" prefHeight="25.0" prefWidth="136.0" text="Limpar">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                           </buttons>
+                        </ButtonBar>
+                        <HBox layoutX="17.0" layoutY="450.0" prefHeight="33.0" prefWidth="516.0">
+                           <children>
+                              <TextField promptText="Nome:" />
+                              <TextField layoutX="10.0" layoutY="10.0" promptText="Especialidade:">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <TextField layoutX="110.0" layoutY="10.0" promptText="CRM:">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="138.0" text="Buscar">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <TableView layoutX="17.0" layoutY="491.0" prefHeight="116.0" prefWidth="516.0">
+                          <columns>
+                            <TableColumn prefWidth="101.0" text="Nome" />
+                            <TableColumn prefWidth="97.0" text="Especialidade" />
+                              <TableColumn prefWidth="92.0" text="CRM" />
+                              <TableColumn prefWidth="91.0" text="Telefone" />
+                              <TableColumn prefWidth="134.0" text="Email" />
+                          </columns>
+                        </TableView>
+                            </children>
+                            <HBox.margin>
+                                <Insets left="80.0" />
+                            </HBox.margin>
+                        </Pane>
+                    </children>
+                </HBox>
+                  <Button fx:id="sairButton1" alignment="CENTER" layoutX="658.0" layoutY="684.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#switchToPrimary" prefHeight="33.0" prefWidth="150.0" text="Sair" textAlignment="CENTER">
+                      <font>
+                          <Font name="System Bold" size="14.0" />
+                      </font>
+                  </Button>
+                  <Button fx:id="agendarButton" alignment="CENTER" layoutX="475.0" layoutY="684.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#switchToSecondaryButton" prefHeight="33.0" prefWidth="150.0" text="Agendar Consulta">
+                      <font>
+                          <Font name="System Bold" size="14.0" />
+                      </font>
+                  </Button>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

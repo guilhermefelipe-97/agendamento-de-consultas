@@ -1,7 +1,5 @@
 package ufrn.tads.agendamentodeconsultas.model;
 
-import java.time.LocalDate;
-
 public class Paciente {
     private int id;
     private String nome;
@@ -9,6 +7,9 @@ public class Paciente {
     private String dataNascimento;
     private String telefone;
     private String endereco;
+    private String medico;
+    private String horario;
+    private String data;
 
     public int getId() {
         return id;
@@ -38,9 +39,7 @@ public class Paciente {
         return dataNascimento;
     }
 
-    public void setDataNascimento(String dataNascimento) {
-        this.dataNascimento = dataNascimento;
-    }
+    public void setDataNascimento(String dataNascimento) { this.dataNascimento = dataNascimento; }
 
     public String getTelefone() {
         return telefone;
@@ -57,4 +56,24 @@ public class Paciente {
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
+
+    public String getMedico() {
+        return medico;
+    }
+
+    public void setMedico(String medico) {
+        this.medico = medico;
+    }
+
+    public String getHorario() {
+        return horario;
+    }
+
+    public void setHorario(String horario) {
+        this.horario = horario;
+    }
+
+    public String getData() { return data; }
+
+    public void setData(String data) { this.data = data; }
 }
